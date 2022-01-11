@@ -35,6 +35,7 @@ to use this dataset we have some endpoints
    `https://api.color.pizza/v1/`
 
 2. To get a list of searched color name endpoint would be called 
+   Note: you have enter minimum 3 character to search 
    `https://api.color.pizza/v1/names/{{query}}`  replace `{{query}}` with color name like if you enter red than url will be 
    `https://api.color.pizza/v1/names/red`
 
