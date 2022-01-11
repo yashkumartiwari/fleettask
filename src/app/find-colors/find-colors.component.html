@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="col-md-12 mt-3 mb-3">
+        <div class="m-auto d-flex">
+            <input type="text" [(ngModel)]="filterColor">
+            <button class="btn btn-primary ms-2" (click)="getMatchedData()">Search</button>
+            <!-- <button class="btn btn-primary ms-2" (click)="getAllColors()">All colors</button> -->
+        </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-3 col-lg-2 colorbox" *ngFor="let color of colorList" [style.backgroundColor]="color.hex">
+        <h5>
+            {{color.name}}
+        </h5>
+        <h5>{{color.hex}}</h5>
+    </div>
+</div>
