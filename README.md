@@ -2,26 +2,40 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.4.
 
-## Development server
+## first step 
+Clone the repository from the link by running the given command in the terminal
+`git clone https://github.com/yashkumartiwari/fleettask.git`
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## second Step 
+open the folder in the VS code or any IDE and run the below command to install the node modules and
+`npm install`
 
-## Code scaffolding
+## third step 
+run the app on localhost by the below command
+`npm start` or `ng serve`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## fourth step 
+open the browser by and hit the beloww url
+`http://localhost:4200/`
 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Development server
 
-## Running end-to-end tests
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## To get the color details i used the below dataset repository 
+`https://github.com/meodai/color-names`
 
-## Further help
+to use this dataset we have some endpoints 
+1. To get All colors list the endpoint would be called
+   `https://api.color.pizza/v1/`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+2. To get a list of searched color name endpoint would be called 
+   `https://api.color.pizza/v1/names/{{query}}`  replace `{{query}}` with color name like if you enter red than url will be 
+   `https://api.color.pizza/v1/names/red`
+
+
