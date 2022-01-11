@@ -12,6 +12,7 @@ export class FindColorsComponent implements OnInit {
   constructor(private http:HttpServiceService) { }
   colorList: colorList[] = [];
   filterColor:any;
+  validsearch:boolean = true;
 
   ngOnInit(){
   
@@ -24,9 +25,15 @@ export class FindColorsComponent implements OnInit {
   })
   }
   getMatchedData(){
-    this.http.getMatchedColor(this.filterColor).subscribe(res=>{
+    if(this.filterColor.length>=3){
+      this.validsearch = true;
+      this.http.getMatchedColor(this.filterColor).subscribe(res=>{
         this.colorList = res.colors
     })
+    }else{
+      this.colorList = []
+    }
+    
   }
 
 }

@@ -1,12 +1,13 @@
 <div class="container">
     <div class="row mt-3 mb-3">
         <div class="col-6 col-sm-8 col-md-4 m-auto">
-            <input type="text" [(ngModel)]="filterColor" (keyup)="getMatchedData()" placeholder="Enter your word">
+            <input type="text" [(ngModel)]="filterColor" (keyup)="filterColor.length>2?getMatchedData():validsearch=false" placeholder="Enter your word"><br>
+            <p *ngIf="!validsearch" class="text-white">Minimum 3 char are required</p>
             <!-- <button class="btn btn-primary ms-2" (click)="getMatchedData()">Search</button> -->
             <!-- <button class="btn btn-primary ms-2" (click)="getAllColors()">All colors</button> -->
         </div>
     </div>
-    <div class="row row-cols-1 row-cols-md-3 g-4" data-masonry='{"percentPosition": true,  "itemSelector": ".col" }'>
+    <div *ngIf="validsearch" class="row row-cols-1 row-cols-md-3 g-4" data-masonry='{"percentPosition": true,  "itemSelector": ".col" }'>
         <div class="col" *ngFor="let color of colorList">
             <div class="card" [style.backgroundColor]="color.hex">
                 <div class="card-body">
