@@ -39,4 +39,6 @@ to use this dataset we have some endpoints
    `https://api.color.pizza/v1/names/{{query}}`  replace `{{query}}` with color name like if you enter red than url will be 
    `https://api.color.pizza/v1/names/red`
 
+## In this project I have used bootstrap 5 CSS framework and also added masonry grid plugin in index.html file by script tag using CDN.
+
 
